@@ -96,8 +96,8 @@ print("[INFO] serializing network...")
 model.save(args["model"])
 
 ###My changes####
-for key in H.history.keys():
-    print(key)
+#for key in H.history.keys():
+#    print(key)
 
 # plot the training loss and accuracy
         
