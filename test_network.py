@@ -1,5 +1,5 @@
 # USAGE
-# python test_network.py --model santa_not_santa.model --image images/examples/santa_01.png
+# python test_network.py --model shot_not_shot.model --image images/examples/shot_01.png
 
 # import the necessary packages
 from keras.preprocessing.image import img_to_array
@@ -32,11 +32,11 @@ print("[INFO] loading network...")
 model = load_model(args["model"])
 
 # classify the input image
-(notSanta, santa) = model.predict(image)[0]
+(notShot, shot) = model.predict(image)[0]
 
 # build the label
-label = "Santa" if santa > notSanta else "Not Santa"
-proba = santa if santa > notSanta else notSanta
+label = "shot" if shot > notShot else "Not shot"
+proba = shot if shot > notShot else notShot
 label = "{}: {:.2f}%".format(label, proba * 100)
 
 # draw the label on the image

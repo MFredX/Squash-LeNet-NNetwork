@@ -57,7 +57,7 @@ for imagePath in imagePaths:
 	# extract the class label from the image path and update the
 	# labels list
 	label = imagePath.split(os.path.sep)[-2]
-	label = 1 if label == "santa" else 0
+	label = 1 if label == "shot" else 0
 	labels.append(label)
 
 # scale the raw pixel intensities to the range [0, 1]
@@ -114,7 +114,7 @@ plt.plot(np.arange(0, N), H.history["val_accuracy"], label="val_acc")
 plt.plot(np.arange(0, N), H.history["loss"], label="train_loss")
 plt.plot(np.arange(0, N), H.history["accuracy"], label="train_acc")
 
-plt.title("Training Loss and Accuracy on Santa/Not Santa")
+plt.title("Training Loss and Accuracy on Shot/Not Shot")
 plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy")
 plt.legend(loc="lower left")
