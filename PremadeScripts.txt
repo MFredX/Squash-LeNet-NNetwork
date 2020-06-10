@@ -1,6 +1,6 @@
 cd C:\Users\sachi\Documents\GitHub\image-classification-keras
 
-python train_network.py --dataset images --model santa_not_santa.model
+python train_network.py --dataset images --model shot_not_shot.model
 
 python test_network.py --model shot_not_shot.model--image examples/santa_01.png
 
